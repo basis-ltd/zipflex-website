@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <main className="bg-black w-full">
-      <header className="h-[12vh] z-[1000] flex items-center justify-between w-[85%] mx-auto">
+      <header className="h-[12vh] z-[1000] flex items-center justify-between w-[80%] mx-auto">
         <figure className="min-w-[20%]">
           <h1 className="text-white text-2xl">Logo</h1>
         </figure>
@@ -60,12 +60,12 @@ const Navbar = () => {
                     {services.map((service) => {
                       return (
                         <li key={service.name}>
-                          <a
-                            href={service.path}
+                          <Link
+                            to={service.path}
                             className="text-white hover:text-[#FFD700]"
                           >
                             {service.name}
-                          </a>
+                          </Link>
                         </li>
                       );
                     })}

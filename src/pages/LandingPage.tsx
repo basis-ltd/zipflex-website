@@ -1,11 +1,13 @@
 import Button from '../components/Button';
 import PublicLayout from '../containers/layout/PublicLayout';
+import ServicesSection from '../containers/landing-page/ServicesSection';
 
-const Home = () => {
+const LandingPage = () => {
   return (
     <PublicLayout>
-      <main className="w-full flex flex-col bg-background gap-5 hero-section bg-cover bg-center">
-        <section className="w-[85%] mx-auto h-[88vh] flex flex-col items-start justify-between relative py-[8%]">
+      <main className="w-full h-full flex flex-col">
+        <section className='hero-section bg-background bg-cover bg-center'>
+        <section className="w-[80%] mx-auto h-[88vh] flex flex-col items-start justify-between relative py-[8%]">
           <h1></h1>
           <h1 className="w-[50%] text-6xl text-white flex">
             Next gen IT software solutions
@@ -19,9 +21,11 @@ const Home = () => {
             </Button>
           </menu>
         </section>
+        </section>
+        <ServicesSection />
       </main>
     </PublicLayout>
   );
 };
 
-export default Home;
+export default LandingPage;

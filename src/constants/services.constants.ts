@@ -1,3 +1,9 @@
+import artificialIntelligence from '../../public/artificial_intelligence.gif';
+import dataAnalytics from '../../public/data_analytics.gif';
+import digitalTransformation from '../../public/digital_transformation.gif';
+import innovationConsulting from '../../public/innovation_consulting.gif';
+import softwareEngineering from '../../public/software_engineering.gif';
+
 export const itServicesCategories = {
   'Software Development': [
     {
@@ -60,3 +66,41 @@ export const itServicesCategories = {
     },
   ],
 };
+
+export const itServices = [
+  {
+    name: 'Artificial Intelligence',
+    description:
+      'We provide artificial intelligence services to help businesses improve their operations and customer experience.',
+    image: artificialIntelligence,
+    path: '/services/artificial-intelligence',
+  },
+  {
+    name: 'Data Analytics',
+    description:
+      'We provide data analytics services to help businesses make data-driven decisions.',
+    image: dataAnalytics,
+    path: '/services/data-analytics',
+  },
+  {
+    name: 'Digital Transformation',
+    description:
+      'We provide digital transformation services to help businesses improve their operations and customer experience.',
+    image: digitalTransformation,
+    path: '/services/digital-transformation',
+  },
+  {
+    name: 'Innovation Consulting',
+    description:
+      'We provide innovation consulting services to help businesses improve their operations and customer experience.',
+    image: innovationConsulting,
+    path: '/services/innovation-consulting',
+  },
+  {
+    name: 'Software Engineering',
+    description:
+      'We provide software engineering services to help businesses improve their operations and customer experience.',
+    image: softwareEngineering,
+    path: '/services/software-engineering',
+  },
+];
