@@ -8,7 +8,7 @@ const FooterSection = () => {
       <section className="w-[75%] mx-auto flex flex-col justify-evenly h-full">
         <article className="flex justify-between items-start">
           <menu className="flex flex-col gap-12 w-[20%]">
-            <h1 className='text-4xl'>Logo</h1>
+            <img className='w-16' src='https://res.cloudinary.com/nishimweprince/image/upload/v1721593300/zipflex/zipflex_logo_w7xmxf.png' />
             <address className="not-italic text-[#808080] text-xl">
               <h3 className="font-bold">Office:</h3>
               <p>Telecom House,</p>

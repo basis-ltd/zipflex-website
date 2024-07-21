@@ -18,9 +18,9 @@ const Navbar = ({
   return (
     <main className="bg-black w-full fixed z-[10000]">
       <header className="h-[12vh] z-[1000] flex items-center justify-between w-[75%] mx-auto">
-        <figure className="min-w-[10%] bg-black rounded-md p-1 flex items-center justify-center">
-          <h1 className="text-white text-2xl">Logo</h1>
-        </figure>
+        <Link to={'/'} className="min-w-[10%] bg-black rounded-md p-1 flex items-center justify-center">
+          <img className='w-16' src='https://res.cloudinary.com/nishimweprince/image/upload/v1721593300/zipflex/zipflex_logo_w7xmxf.png' />
+        </Link>
         <nav className="w-full flex items-center gap-6 justify-end">
           {Object.entries(itServicesCategories)?.map(
             ([category, services], index: number) => {

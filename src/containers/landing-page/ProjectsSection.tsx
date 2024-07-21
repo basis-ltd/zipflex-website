@@ -53,7 +53,6 @@ const ProjectsSection = ({
             })}
           </CarouselContent>
           <CarouselPrevious
-            size="button"
             className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-5"
           />
           <CarouselNext className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-[-20px]" />

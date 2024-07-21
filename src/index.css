@@ -13,7 +13,7 @@
 
 .hero-section {
     position: relative;
-    background-image: url('../public/landing-hero.gif');
+    background-image: url('https://res.cloudinary.com/nishimweprince/image/upload/v1721593315/zipflex/landing-hero_ok1nn2.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
