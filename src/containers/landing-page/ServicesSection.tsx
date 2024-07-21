@@ -6,10 +6,14 @@ import {
   faMinus,
 } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import Button from '../../components/inputs/Button';
 
-const ServicesSection = () => {
+const ServicesSection = ({
+  onCallToAction,
+}: {
+  onCallToAction: MouseEventHandler<HTMLAnchorElement>;
+}) => {
   return (
     <main className="bg-secondary min-h-[88vh]">
       <section className="w-[75%] mx-auto py-[7%] flex flex-col gap-12">
@@ -19,7 +23,11 @@ const ServicesSection = () => {
             return <Servicescard key={index} service={service} index={index} />;
           })}
         </menu>
-        <Button className="!w-[50%] !text-xl !h-[7vh]" primary>
+        <Button
+          className="!w-[50%] !text-xl !h-[7vh]"
+          primary
+          onClick={onCallToAction}
+        >
           Again, let's talk
         </Button>
       </section>

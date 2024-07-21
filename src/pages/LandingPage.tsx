@@ -6,28 +6,52 @@ import ContactSection from '../containers/landing-page/ContactSection';
 import FooterSection from '../containers/landing-page/FooterSection';
 
 const LandingPage = () => {
+  // SCROLL TO ID
+  const scrollToId = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <PublicLayout>
       <main className="w-full h-full flex flex-col">
-        <section className='hero-section bg-background bg-cover bg-center'>
-        <section className="w-[75%] mx-auto h-[88vh] flex flex-col items-start justify-between relative py-[8%]">
-          <h1></h1>
-          <h1 className="w-[50%] text-6xl text-white flex">
-            Next gen IT software solutions
-          </h1>
-          <menu className="w-full flex items-center justify-between text-3xl">
-            <h1 className="text-white">
-              We deliver <span className="text-secondary text-3xl">value</span>
+        <section className="hero-section bg-background bg-cover bg-center">
+          <section className="w-[75%] mx-auto h-[88vh] flex flex-col items-start justify-between relative py-[8%]">
+            <h1></h1>
+            <h1 className="w-[50%] text-6xl text-white flex">
+              Next gen IT software solutions
             </h1>
-            <Button className="!text-2xl !px-12 !border-primary" primary>
-              Let's talk
-            </Button>
-          </menu>
+            <menu className="w-full flex items-center justify-between text-3xl">
+              <h1 className="text-white">
+                We deliver{' '}
+                <span className="text-secondary text-3xl">value</span>
+              </h1>
+              <Button
+                className="!text-2xl !px-12 !border-primary"
+                primary
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId('contact');
+                }}
+              >
+                Let's talk
+              </Button>
+            </menu>
+          </section>
         </section>
-        </section>
-        <ServicesSection />
-        <ProjectsSection />
-        <ContactSection />
+        <ServicesSection
+          onCallToAction={(e) => {
+            e.preventDefault();
+            scrollToId('contact');
+          }}
+        />
+        <ProjectsSection
+          onCallToAction={(e) => {
+            e.preventDefault();
+            scrollToId('contact');
+          }}
+        />
+        <ContactSection id="contact" />
         <FooterSection />
       </main>
     </PublicLayout>

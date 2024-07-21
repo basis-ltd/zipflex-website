@@ -11,8 +11,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '../../components/ui/carousel';
+import { MouseEventHandler } from 'react';
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ onCallToAction }: {
+  onCallToAction: MouseEventHandler<HTMLAnchorElement>;
+}) => {
   return (
     <main className="min-h-[88vh] bg-white">
       <section className="w-[75%] mx-auto min-h-[88vh] flex flex-col gap-8 items-start justify-between py-[8%]">
@@ -65,7 +68,7 @@ const ProjectsSection = () => {
               />
             </Link>
           </ul>
-          <Button primary className="!h-[6vh] px-12 text-xl align-end">
+          <Button primary className="!h-[6vh] px-12 text-xl align-end" onClick={onCallToAction}>
             Get started with us
           </Button>
         </menu>
