@@ -3,7 +3,7 @@ import { itServicesCategories } from '../../constants/services.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import Button from '../../components/Button';
+import Button from '../../components/inputs/Button';
 
 const Navbar = () => {
   const [showServices, setShowServices] = useState({
@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <main className="bg-black w-full">
-      <header className="h-[12vh] z-[1000] flex items-center justify-between w-[80%] mx-auto">
+      <header className="h-[12vh] z-[1000] flex items-center justify-between w-[75%] mx-auto">
         <figure className="min-w-[20%]">
           <h1 className="text-white text-2xl">Logo</h1>
         </figure>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     <FontAwesomeIcon icon={faChevronCircleDown} />
                   </ul>
                   <ul
-                    className={`flex z-[10000] flex-col gap-1 min-w-[200px] bg-black p-3 rounded-sm absolute transition-all duration-700 ease-in-out ${
+                    className={`flex z-[10000] flex-col gap-5 min-w-[200px] bg-white p-3 rounded-sm absolute transition-all duration-700 ease-in-out ${
                       showServices?.show && showServices?.category === category
                         ? 'translate-y-[70px]'
                         : 'translate-y-[-400px]'
@@ -62,7 +62,7 @@ const Navbar = () => {
                         <li key={service.name}>
                           <Link
                             to={service.path}
-                            className="text-white hover:text-[#FFD700]"
+                            className="text-black hover:text-primary hover:font-bold"
                           >
                             {service.name}
                           </Link>

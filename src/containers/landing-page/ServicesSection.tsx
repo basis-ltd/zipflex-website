@@ -3,12 +3,12 @@ import { itServices } from '../../constants/services.constants';
 import { faArrowDown, faArrowRight, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Button from '../../components/Button';
+import Button from '../../components/inputs/Button';
 
 const ServicesSection = () => {
   return (
     <main className="bg-secondary min-h-[100vh]">
-      <section className="w-[80%] mx-auto py-[7%] flex flex-col gap-12">
+      <section className="w-[75%] mx-auto py-[7%] flex flex-col gap-12">
         <h1 className="text-4xl font-black">Various ways we can help you</h1>
         <menu className="flex flex-col">
           {itServices?.map((service, index: number) => {

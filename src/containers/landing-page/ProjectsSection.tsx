@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { projectsData } from '../../constants/projects.constants';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import Button from '../../components/Button';
+import Button from '../../components/inputs/Button';
 import { faChevronCircleRight } from '@fortawesome/free-solid-svg-icons/faChevronCircleRight';
 import {
   Carousel,
@@ -15,7 +15,7 @@ import {
 const ProjectsSection = () => {
   return (
     <main className="min-h-[100vh] bg-white">
-      <section className="w-[80%] mx-auto h-[88vh] flex flex-col gap-8 items-start justify-between py-[8%]">
+      <section className="w-[75%] mx-auto h-[88vh] flex flex-col gap-8 items-start justify-between py-[8%]">
         <h1 className="text-6xl text-black flex font-black">Latest Projects</h1>
         <Carousel className="w-full flex items-center flex-wrap gap-12 justify-between text-3xl">
           <CarouselContent>
