@@ -8,7 +8,13 @@ type PublicLayoutProps = {
 const PublicLayout = ({ children }: PublicLayoutProps) => {
   return (
     <main className="w-full flex flex-col gap-0 relative">
-      <Navbar />
+      <Navbar
+        onCallToAction={(e) => {
+          e.preventDefault();
+          const element = document.getElementById('contact');
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      />
       <section className="w-full absolute top-[12vh]">{children}</section>
     </main>
   );

@@ -13,8 +13,10 @@ import {
 } from '../../components/ui/carousel';
 import { MouseEventHandler } from 'react';
 
-const ProjectsSection = ({ onCallToAction }: {
-  onCallToAction: MouseEventHandler<HTMLAnchorElement>;
+const ProjectsSection = ({
+  onCallToAction,
+}: {
+  onCallToAction?: MouseEventHandler<HTMLAnchorElement>;
 }) => {
   return (
     <main className="min-h-[88vh] bg-white">
@@ -26,19 +28,21 @@ const ProjectsSection = ({ onCallToAction }: {
               return (
                 <CarouselItem key={index} className="basis-1/3">
                   <Link
-                    to={`/projects/${project.id}`}
+                    to={`#`}
                     key={index}
                     className="flex flex-col items-start gap-4 py-4"
                   >
                     <figure className="w-full h-[300px] transition-all ease-in-out duration-300 hover:scale-[1.02]">
                       <img
-                        src={'https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'}
+                        src={
+                          'https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+                        }
                         alt={project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover hover:rounded-lg hover:scale-[1.02] transition-all ease-in-out duration-300"
                       />
                     </figure>
                     <menu className="flex flex-col w-full items-start gap-3">
-                      <h1 className="text-xl font-bold flex items-center gap-3">
+                      <h1 className="text-xl font-bold flex items-center gap-3 hover:text-primary hover:font-bold transition-all ease-in-out duration-300 hover:gap-4 hover:text-2xl">
                         {project.title} <FontAwesomeIcon icon={faArrowRight} />
                       </h1>
                     </menu>
@@ -49,7 +53,7 @@ const ProjectsSection = ({ onCallToAction }: {
             })}
           </CarouselContent>
           <CarouselPrevious
-          size="button"
+            size="button"
             className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-5"
           />
           <CarouselNext className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-[-20px]" />
@@ -58,7 +62,7 @@ const ProjectsSection = ({ onCallToAction }: {
           <ul className="flex flex-col items-start gap-2">
             <h1 className="text-3xl text-black">Want to see more projects?</h1>
             <Link
-              to="/projects"
+              to="#"
               className="text-2xl text-primary transition-all flex items-center gap-2 ease-in-out duration-300 hover:scale-[1.01] hover:gap-3"
             >
               View all
@@ -68,7 +72,11 @@ const ProjectsSection = ({ onCallToAction }: {
               />
             </Link>
           </ul>
-          <Button primary className="!h-[6vh] px-12 text-xl align-end" onClick={onCallToAction}>
+          <Button
+            primary
+            className="!h-[6vh] px-12 text-xl align-end"
+            onClick={onCallToAction}
+          >
             Get started with us
           </Button>
         </menu>

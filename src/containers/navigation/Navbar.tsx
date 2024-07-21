@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom';
 import { itServicesCategories } from '../../constants/services.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronCircleDown } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 import Button from '../../components/inputs/Button';
 
-const Navbar = () => {
+const Navbar = ({
+  onCallToAction,
+}: {
+  onCallToAction?: MouseEventHandler<HTMLAnchorElement>;
+}) => {
   const [showServices, setShowServices] = useState({
     show: false,
     category: '',
@@ -77,7 +81,7 @@ const Navbar = () => {
               );
             }
           )}
-          <Button>Contact Us</Button>
+          <Button onClick={onCallToAction}>Contact Us</Button>
         </nav>
       </header>
     </main>

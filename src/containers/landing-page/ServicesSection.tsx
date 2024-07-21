@@ -12,7 +12,7 @@ import Button from '../../components/inputs/Button';
 const ServicesSection = ({
   onCallToAction,
 }: {
-  onCallToAction: MouseEventHandler<HTMLAnchorElement>;
+  onCallToAction?: MouseEventHandler<HTMLAnchorElement>;
 }) => {
   return (
     <main className="bg-secondary min-h-[88vh]">
@@ -89,6 +89,9 @@ export const Servicescard = ({
             <FontAwesomeIcon
               className="bg-primary text-white text-[18px] p-3 px-[12.3px] rounded-full transition-all ease-in-out duration-300 hover:scale-[1.01]"
               icon={faArrowRight}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
             />
           </menu>
         )}
