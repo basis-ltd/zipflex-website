@@ -37,7 +37,7 @@ const ContactSection = () => {
   };
 
   return (
-    <main className="contact-section flex w-full flex-col gap-4 h-[100vh] text-white">
+    <main className="contact-section flex w-full flex-col gap-4 h-[88vh] text-white">
       <section className="w-[75%] mx-auto flex flex-col gap-12 h-full justify-center">
         <h1 className="text-3xl font-bold">Contact us</h1>
         <form className="flex flex-col gap-8" onSubmit={handleSubmit(onSubmit)}>

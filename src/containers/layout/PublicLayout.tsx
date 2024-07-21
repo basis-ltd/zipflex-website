@@ -7,9 +7,9 @@ type PublicLayoutProps = {
 
 const PublicLayout = ({ children }: PublicLayoutProps) => {
   return (
-    <main className="w-full flex flex-col gap-0">
+    <main className="w-full flex flex-col gap-0 relative">
       <Navbar />
-      <section className="w-full">{children}</section>
+      <section className="w-full absolute top-[12vh]">{children}</section>
     </main>
   );
 };

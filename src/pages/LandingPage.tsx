@@ -3,6 +3,7 @@ import PublicLayout from '../containers/layout/PublicLayout';
 import ServicesSection from '../containers/landing-page/ServicesSection';
 import ProjectsSection from '../containers/landing-page/ProjectsSection';
 import ContactSection from '../containers/landing-page/ContactSection';
+import FooterSection from '../containers/landing-page/FooterSection';
 
 const LandingPage = () => {
   return (
@@ -27,6 +28,7 @@ const LandingPage = () => {
         <ServicesSection />
         <ProjectsSection />
         <ContactSection />
+        <FooterSection />
       </main>
     </PublicLayout>
   );

@@ -12,9 +12,9 @@ const Navbar = () => {
   });
 
   return (
-    <main className="bg-black w-full">
+    <main className="bg-black w-full fixed z-[10000]">
       <header className="h-[12vh] z-[1000] flex items-center justify-between w-[75%] mx-auto">
-        <figure className="min-w-[20%]">
+        <figure className="min-w-[10%] bg-black rounded-md p-1 flex items-center justify-center">
           <h1 className="text-white text-2xl">Logo</h1>
         </figure>
         <nav className="w-full flex items-center gap-6 justify-end">
@@ -63,6 +63,9 @@ const Navbar = () => {
                           <Link
                             to={service.path}
                             className="text-black hover:text-primary hover:font-bold"
+                            onClick={(e) => {
+                              e.preventDefault();
+                            }}
                           >
                             {service.name}
                           </Link>

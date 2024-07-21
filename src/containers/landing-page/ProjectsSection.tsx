@@ -14,8 +14,8 @@ import {
 
 const ProjectsSection = () => {
   return (
-    <main className="min-h-[100vh] bg-white">
-      <section className="w-[75%] mx-auto h-[88vh] flex flex-col gap-8 items-start justify-between py-[8%]">
+    <main className="min-h-[88vh] bg-white">
+      <section className="w-[75%] mx-auto min-h-[88vh] flex flex-col gap-8 items-start justify-between py-[8%]">
         <h1 className="text-6xl text-black flex font-black">Latest Projects</h1>
         <Carousel className="w-full flex items-center flex-wrap gap-12 justify-between text-3xl">
           <CarouselContent>
