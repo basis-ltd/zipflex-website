@@ -1,6 +1,7 @@
 import Button from '../components/Button';
 import PublicLayout from '../containers/layout/PublicLayout';
 import ServicesSection from '../containers/landing-page/ServicesSection';
+import ProjectsSection from '../containers/landing-page/ProjectsSection';
 
 const LandingPage = () => {
   return (
@@ -23,6 +24,7 @@ const LandingPage = () => {
         </section>
         </section>
         <ServicesSection />
+        <ProjectsSection />
       </main>
     </PublicLayout>
   );

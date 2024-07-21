@@ -74,7 +74,7 @@ const Navbar = () => {
               );
             }
           )}
-          <Button primary>Contact Us</Button>
+          <Button>Contact Us</Button>
         </nav>
       </header>
     </main>
