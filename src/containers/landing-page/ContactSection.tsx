@@ -44,7 +44,7 @@ const ContactSection = ({ id }: { id?: string }) => {
       <section className="w-[75%] mx-auto flex flex-col gap-12 h-full justify-center">
         <h1 className="text-3xl font-bold">Contact us</h1>
         <form className="flex flex-col gap-8" onSubmit={handleSubmit(onSubmit)}>
-          <fieldset className="grid grid-cols-2 gap-12 w-full">
+          <fieldset className="grid grid-cols-2 gap-12 w-full max-[600px]:grid-cols-1">
             <Controller
               name="name"
               control={control}

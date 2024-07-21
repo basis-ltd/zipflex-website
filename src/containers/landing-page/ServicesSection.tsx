@@ -20,11 +20,11 @@ const ServicesSection = ({
         <h1 className="text-4xl font-black">Various ways we can help you</h1>
         <menu className="flex flex-col">
           {itServices?.map((service, index: number) => {
-            return <Servicescard key={index} service={service} index={index} />;
+            return <ServicesCard key={index} service={service} index={index} />;
           })}
         </menu>
         <Button
-          className="!w-[50%] !text-xl !h-[7vh]"
+          className="w-[50%] !text-xl !h-[7vh] max-[650px]:!w-full max-[650px]:!text-lg"
           primary
           onClick={onCallToAction}
         >
@@ -37,7 +37,7 @@ const ServicesSection = ({
 
 export default ServicesSection;
 
-export const Servicescard = ({
+export const ServicesCard = ({
   service,
   index,
 }: {
@@ -57,9 +57,9 @@ export const Servicescard = ({
         e.preventDefault();
         setShowServiceDescription(!showServiceDescription);
       }}
-      className="grid grid-cols-2 gap-5 items-center px-4 w-full min-h-[10vh] border-y border-[#D9BA32]"
+      className="flex items-start gap-5 px-4 w-full min-h-[10vh] border-y border-[#D9BA32] max-[650px]:flex max-[650px]:flex-col max-[650px]:items-center"
     >
-      <figure className="flex items-start w-full">
+      <figure className="flex items-start w-full mt-4">
         <img
           src={service.image}
           alt={service.name}
@@ -70,7 +70,9 @@ export const Servicescard = ({
         <menu className="flex w-full items-center gap-3 justify-between">
           <ul className="flex items-center gap-4">
             <p className="text-2xl font-bold">0{index + 1}</p>
-            <h1 className="text-3xl font-bold">{service.name}</h1>
+            <h1 className="text-3xl font-bold max-[950px]:text-2xl max-[850]:text-xl">
+              {service.name}
+            </h1>
           </ul>
           <FontAwesomeIcon
             className="text-[16px] h-6 transition-all ease-in-out duration-300"

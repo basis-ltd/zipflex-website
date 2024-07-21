@@ -26,13 +26,13 @@ const ProjectsSection = ({
           <CarouselContent>
             {projectsData.map((project, index) => {
               return (
-                <CarouselItem key={index} className="basis-1/3">
+                <CarouselItem key={index}>
                   <Link
                     to={`#`}
                     key={index}
-                    className="flex flex-col items-start gap-4 py-4"
+                    className="flex flex-col items-start gap-4 py-4 w-[80%] mx-auto"
                   >
-                    <figure className="w-full h-[300px] transition-all ease-in-out duration-300 hover:scale-[1.02]">
+                    <figure className="w-full h-[400px] transition-all ease-in-out duration-300 hover:scale-[1.02] max-[900px]:h-[250px] max-[650px]:h-[200px]">
                       <img
                         src={
                           'https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
@@ -53,13 +53,12 @@ const ProjectsSection = ({
             })}
           </CarouselContent>
           <CarouselPrevious
-            className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-5"
-          />
-          <CarouselNext className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-[-20px]" />
+            className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-5 max-[900px]:!h-[50px] max-[900px]:!w-[50px] max-[750px]:!w-[40px] max-[750px]:!h-[40px]"         />
+          <CarouselNext className="border-primary bg-primary text-white cursor-pointer hover:bg-primary hover:text-white hover:scale-[1.1] !h-[60px] !w-[60px] transition-all ease-in-out duration-700 translate-x-[-20px] max-[900px]:!h-[50px] max-[900px]:!w-[50px] max-[750px]:!w-[40px] max-[750px]:!h-[40px]" />
         </Carousel>
-        <menu className="pb-12 w-full flex items-center gap-3 justify-between">
-          <ul className="flex flex-col items-start gap-2">
-            <h1 className="text-3xl text-black">Want to see more projects?</h1>
+        <menu className="pb-12 w-full flex items-center gap-3 justify-between max-[650px]:flex-col">
+          <ul className="flex flex-col items-start gap-2 max-[650px]:items-center">
+            <h1 className="text-3xl text-black max-[650px]:text-center">Want to see more projects?</h1>
             <Link
               to="#"
               className="text-2xl text-primary transition-all flex items-center gap-2 ease-in-out duration-300 hover:scale-[1.01] hover:gap-3"
