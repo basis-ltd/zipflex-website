@@ -46,7 +46,7 @@ const ProjectsSection = ({
                         {project.title} <FontAwesomeIcon icon={faArrowRight} />
                       </h1>
                     </menu>
-                    <p className="text-lg">{project.description}</p>
+                    {/* <p className="text-lg">{project.description}</p> */}
                   </Link>
                 </CarouselItem>
               );
